@@ -16,7 +16,7 @@ pub fn d1e2() {
 }
 
 fn read_input() -> Vec<usize> {
-  io::BufReader::new(File::open("input.txt").unwrap())
+  io::BufReader::new(File::open("day1.txt").unwrap())
     .lines()
     .map(|line| line.unwrap().parse::<usize>().unwrap())
     .collect()
