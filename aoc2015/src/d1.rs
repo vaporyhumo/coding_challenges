@@ -1,6 +1,6 @@
 use std::{fs::File, io::Read};
 
-fn contents() -> String {
+fn read_input() -> String {
   let filename = "day1.txt";
   let mut file = File::open(filename).unwrap();
   let mut contents = String::new();
@@ -9,7 +9,7 @@ fn contents() -> String {
 }
 
 pub fn d1e1() {
-  let contents = contents();
+  let contents = read_input();
 
   let result = contents.chars().fold(0isize, |acc, c| match c {
     '(' => acc + 1,
@@ -21,7 +21,7 @@ pub fn d1e1() {
 }
 
 pub fn d1e2() {
-  let contents = contents();
+  let contents = read_input();
   let mut floor = 0;
 
   for (i, el) in contents.chars().enumerate() {
